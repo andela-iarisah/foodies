@@ -1,0 +1,75 @@
+div.header {
+	background-image: url('../images/bgimage.jpg');
+	background-size: 100% 100%;
+	text-align: center;
+}
+
+h1 {
+	font-family: 'segoe script', 'segoe print', 'comic sans ms', cursive;
+	color: red;
+	font-size: 6em;
+	padding: 30px 50px 50px 50px;
+	text-shadow: 0 0 10px yellow;
+}
+
+p.title {
+	color: white;
+	font-size: 3em;
+	padding-bottom: 10px;
+	font-family: 'HP simplified Light', arial, sans-serif;
+}
+
+div.search {
+	padding-top: 20px;
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.7);
+	width: 40%;
+	margin: 0 auto;
+}
+
+input#search {
+	padding: 3px;
+}
+
+input#submit {
+	padding: 5px 30px 5px 5px;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	float: right;
+	background-color: black;
+	text-align: center;
+}
+
+li.style {
+	display: inline-block;
+	padding-top: 50px;
+}
+
+li.style:hover {
+	background-color: rgba(255, 0, 0, .5);
+}
+
+a {
+	color: yellow;
+}
+
+img.resize {
+	max-width: 150%;
+	height: 200px;
+	float: left;
+}
+
+p.width {
+	width: 100px;
+	float: left;
+	height: 50px;
+	padding: 10px;
+}
+
+div#toAttach {
+	
+}
