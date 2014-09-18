@@ -35,9 +35,9 @@ input#search {
 	padding: 3px;
 }
 
-input#submit {
+/*input#submit {
 	padding: 5px 30px 5px 5px;
-}
+}*/
 
 ul {
 	list-style: none;
@@ -84,7 +84,7 @@ p.id {
 	display: none;
 }
 
-input.button {
+/*input.button {
 	margin-top: 80px;
 	position: relative;
-}
+}*/
