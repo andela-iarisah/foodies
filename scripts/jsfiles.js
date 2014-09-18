@@ -12,6 +12,12 @@ var foodies = {
 		$('#submit').click(foodies.searchRecipe);
 	},
 
+	// animation: function() {
+	// 	$('#submit').click(function() {
+
+	// 	});
+	// },
+
 	iteration: function(response) {
 		$('div#toAttach').empty();
 		var image = '<ul>';
@@ -30,6 +36,11 @@ var foodies = {
 
 	searchRecipe: function() {
 		foodies.parameter.q = $("#search").val();
+		if (!isNaN(foodies.parameter.q)) {
+			$('div.header').hide();
+			$('div#toAttach').append('<div class= "error"><img height= "500px" width= "500px" class= "center" src= "images/error.jpg"/></div>').append('<p class= "right">Uh-oh!</p>').append('<div class= "recover"><a href= "index.html"><input id= "return" type= "button" value= "Return to Page"></a></div>');
+		}
+		else{
 			console.log(foodies.parameter.q);
 			var search;
 				$.getJSON(foodies.base + 'api/recipes?callback=?', foodies.parameter, function(response){
@@ -37,6 +48,7 @@ var foodies = {
 					foodies.iteration(response);
 			});
 				foodies.parameter.q = $('#search').val('');
+		}
 	},	
 }
 $(document).ready(foodies.init);
