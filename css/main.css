@@ -57,10 +57,6 @@ li.style {
 	margin: 10px;
 }
 
-li.style:hover {
-	background-color: rgba(255, 0, 0, .5);
-}
-
 img.resize {
 	max-width: 150%;
 	height: 200px;
@@ -111,6 +107,12 @@ div.recover {
 	padding-top: 20px;
 }
 
+div.align {
+	width: 100%;
+	text-align: center;
+	padding-top: 20px;
+}
+
 input#return {
 	padding: 10px;
 	border-radius: 20px;
@@ -118,4 +120,5 @@ input#return {
 	background-color: black;
 	color: yellow;
 	border: none;
+	text-align: center;
 }
