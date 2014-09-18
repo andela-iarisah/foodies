@@ -1,3 +1,7 @@
+body {
+	background-color: black;
+}
+
 div.header {
 	background-image: url('../images/bgimage.jpg');
 	background-size: 100% 100%;
@@ -39,22 +43,20 @@ ul {
 	list-style: none;
 	padding: 0;
 	margin: 0;
-	float: right;
-	background-color: black;
+	float: left;
+	width: 100%;
+	/*background-color: pink;*/
 	text-align: center;
 }
 
 li.style {
-	display: inline-block;
-	padding-top: 50px;
+	/*display: inline-block;*/
+	padding: 50px 10px 10px 10px;
+	margin: 10px;
 }
 
 li.style:hover {
 	background-color: rgba(255, 0, 0, .5);
-}
-
-a {
-	color: yellow;
 }
 
 img.resize {
@@ -64,12 +66,25 @@ img.resize {
 }
 
 p.width {
-	width: 100px;
-	float: left;
-	height: 50px;
+	width: 120px;
+	height: 100px;
 	padding: 10px;
+	color: yellow;
 }
 
-div#toAttach {
-	
+p.hidden {
+	display: none;
+}
+
+p.ingredients {
+	text-align: center;
+}
+
+p.id {
+	display: none;
+}
+
+input.button {
+	margin-top: 80px;
+	position: relative;
 }
