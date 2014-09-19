@@ -16,38 +16,37 @@ var foodies = {
 
 	iteration: function(data) {
 		$('div#toAttach').empty();
-		var image = '<ul>';
+		var result = '<ul>';
 		var recipe_id;
 		if (data.matches.length > 0) {
 			$.each(data.matches, function(index, food) {
-				recipe_id = food.id;
+			recipe_id = food.id;
 				 if ($.isEmptyObject(food.imageUrlsBySize)) {
-					image += '<a target= "_blank" href= "' + foodies.base_0 + "external/" + recipe_id + '"><li class= "style">';
-					image += '<img class= "resize" src="images/unavailable.jpg">';
-					image += '<p class= "ingredients hidden">' + recipe_id + '<br><br><input type= "button"  class="recipe" value="Get Recipe"></p>';
-				image +=  '<p class= "width">' + food.recipeName + '</p></li></a>';	
-				}
+					result += '<a target= "_blank" href= "' + foodies.base_0 + "external/" + recipe_id + '"><li class= "style">';
+					result += '<img class= "resize" src="images/unavailable.jpg">';
+					result +=  '<p class= "width">' + food.recipeName + '</p></li></a>';	
+					}
 				else {
-				image += '<a target= "_blank" href= "' + foodies.base_0 + "external/" + recipe_id + '"><li class= "style">';
-				image += '<img class= "resize" src="' + food.imageUrlsBySize[90] + '">';
-				image += '<p class= "ingredients hidden">' + recipe_id + '<br><br><input type= "button"  class="recipe" value="Get Recipe"></p>';
-				image +=  '<p class= "width">' + food.recipeName + '</p></li></a>';	
-			}
+					result += '<a target= "_blank" href= "' + foodies.base_0 + "external/" + recipe_id + '"><li class= "style">';
+					result += '<img class= "resize" src="' + food.imageUrlsBySize[90] + '">';
+					result +=  '<p class= "width">' + food.recipeName + '</p></li></a>';	
+				}
 			});
 		}
 		else {
 			$('div.header').hide();
-			$('body').append(error).append('<p class= "right">Sorry your input is temporarily unavailable</p>').append(errorRedirect);
+			$('body').html(error+ '<p class= "right">Sorry your input is temporarily unavailable</p>' + errorRedirect);
 		}
-			image += '</ul>'
-			$('div#toAttach').append(image);
+			result += '</ul>';
+			$('div#toAttach').append(result);
 	},
 
 	searchRecipe: function(response) {
 		foodies.parameter.q = $("#search").val();	
 		if (!isNaN(foodies.parameter.q)) {
 			$('div.header').hide();
-			$('div#toAttach').append(error).append('<p class= "right">Please type a valid input</p>').append(errorRedirect);
+			$('div#toAttach').html(error + '<p class= "right">Please type a valid input</p>' + errorRedirect);
+
 		}
 		else {
 			var search;
@@ -56,6 +55,6 @@ var foodies = {
 			});
 				foodies.parameter.q = $('#search').val('');
 		}
-	},	
+	},
 }
 $(document).ready(foodies.init);

@@ -6,6 +6,7 @@ div.header {
 	background-image: url('../images/bgimage.jpg');
 	background-size: 100% 100%;
 	text-align: center;
+	border-bottom: 10px solid #660000;
 }
 
 h1 {
@@ -43,43 +44,50 @@ body {
 	background-color: rgb(250, 250, 200);
 }
 
+div#toAttach {
+	margin: 0 auto;
+}
+
 ul {
 	list-style: none;
-	padding: 0;
-	margin: 0;
+	padding: 10px;
 	float: left;
-	width: 100%;
-	text-align: center;
 }
 
 li.style {
-	padding: 50px 10px 10px 10px;
+	padding: 10px;
 	margin: 10px;
-}
-
-img.resize {
-	max-width: 150%;
-	height: 200px;
+	width: 200px;
 	float: left;
 }
 
+img.resize {
+	height: 200px;
+	border: 2px solid red;
+	border-radius: 20px;
+}
+
+img.resize:hover {
+	border: 2px solid #660000;
+	box-shadow: 0 0 10px #660000;
+}
+
 p.width {
-	width: 120px;
-	height: 100px;
-	padding: 10px;
+	width: 200px;
+	height: 50px;
+	padding: 5px;
 	color: yellow;
-}
-
-p.hidden {
-	display: none;
-}
-
-p.ingredients {
+	background-color: black;
+	line-height: 1.2em;
 	text-align: center;
+	font-family: roman, script, sans-serif;
+	font-size: 0.825em;
 }
 
-p.id {
-	display: none;
+p.center {
+	background-color: red;
+
+	width: 10%;
 }
 
 
@@ -87,12 +95,9 @@ p.id {
 		ERROR PAGE
 ***************************/
 
-div.error {
-	width: 100%;
-}
-
 img.center{
 	width: 100%;
+	margin: 0;
 }
 
 p.right {
