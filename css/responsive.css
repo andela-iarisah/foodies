@@ -1,0 +1,13 @@
+@media screen and (max-width: 600px) {
+	h1 {
+		font-size: 3em;
+	}
+
+	p.title {
+		font-size: 1.5em;
+	}
+
+	input#search {
+		width: 90%;
+	}
+}

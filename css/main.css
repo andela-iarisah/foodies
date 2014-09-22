@@ -72,6 +72,16 @@ img.resize:hover {
 	box-shadow: 0 0 10px #660000;
 }
 
+p.ingredients {
+	width: 200px;
+	height: 50px;
+	padding: 5px;
+	background-color: green;
+	white-space: pre-line;
+	text-overflow: auto;
+	cursor: pointer;
+}
+
 p.width {
 	width: 200px;
 	height: 50px;
@@ -82,6 +92,7 @@ p.width {
 	text-align: center;
 	font-family: roman, script, sans-serif;
 	font-size: 0.825em;
+	cursor: pointer;
 }
 
 p.center {
