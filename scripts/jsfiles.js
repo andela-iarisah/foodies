@@ -20,16 +20,19 @@ var foodies = {
 		var recipe_id;
 		if (data.matches.length > 0) {
 			$.each(data.matches, function(index, food) {
+				console.log(data.matches);
 			recipe_id = food.id;
 				 if ($.isEmptyObject(food.imageUrlsBySize)) {
 					result += '<a target= "_blank" href= "' + foodies.base_0 + "external/" + recipe_id + '"><li class= "style">';
-					result += '<img class= "resize" src="images/unavailable.jpg">';
-					result +=  '<p class= "width">' + food.recipeName + '</p></li></a>';	
+					result += '<img class= "resize" src="images/unavailable.jpg"></a>';
+					result += '<p class= "ingredients"><font class= "diff_color">Ingredients include:</font><br>' + food.ingredients + '</p>'
+					result +=  '<p class= "width">' + food.recipeName + '</p></li>';	
 					}
 				else {
 					result += '<a target= "_blank" href= "' + foodies.base_0 + "external/" + recipe_id + '"><li class= "style">';
-					result += '<img class= "resize" src="' + food.imageUrlsBySize[90] + '">';
-					result +=  '<p class= "width">' + food.recipeName + '</p></li></a>';	
+					result += '<img class= "resize" src="' + food.imageUrlsBySize[90] + '"></a>';
+					result += '<p class= "ingredients"><font class= "diff_color">Ingredients include:</font><br>' + food.ingredients + '</p>'
+					result +=  '<p class= "width">' + food.recipeName + '</p></li>';	
 				}
 			});
 		}
@@ -39,6 +42,15 @@ var foodies = {
 		}
 			result += '</ul>';
 			$('div#toAttach').append(result);
+				$('p.ingredients').hide();
+				$('p.width').mouseenter(function() {
+					$(this).slideUp();
+					$(this).siblings().slideDown();
+				});
+				$('p.ingredients').mouseleave(function() {
+					$(this).slideUp();
+					$(this).siblings().slideDown();
+				});
 	},
 
 	searchRecipe: function(response) {
@@ -49,9 +61,8 @@ var foodies = {
 
 		}
 		else {
-			var search;
-				$.getJSON(foodies.base + 'api/recipes?callback=?', foodies.parameter, function(response){
-					foodies.iteration(response);
+			$.getJSON(foodies.base + 'api/recipes?callback=?', foodies.parameter, function(response){
+			foodies.iteration(response);
 			});
 				foodies.parameter.q = $('#search').val('');
 		}

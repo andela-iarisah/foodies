@@ -76,10 +76,19 @@ p.ingredients {
 	width: 200px;
 	height: 50px;
 	padding: 5px;
-	background-color: green;
-	white-space: pre-line;
-	text-overflow: auto;
-	cursor: pointer;
+	background-color: black;
+	color: rgb(255, 100, 100);
+	overflow: auto;
+	cursor: default;
+	text-align: center;
+	font-family: roman, script, sans-serif;
+	line-height: 1.2em;
+	font-size: 0.825em;
+}
+
+font.diff_color {
+	color: rgb(250, 250, 200);
+	padding-bottom: 5px;
 }
 
 p.width {
@@ -92,12 +101,11 @@ p.width {
 	text-align: center;
 	font-family: roman, script, sans-serif;
 	font-size: 0.825em;
-	cursor: pointer;
+	cursor: default;
 }
 
 p.center {
 	background-color: red;
-
 	width: 10%;
 }
 
