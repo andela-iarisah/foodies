@@ -1,5 +1,5 @@
-var error = '<div class= "error"><img height= "500px" width= "500px" 			class= "center" src= "images/error.jpg"/></div>';
-var errorRedirect = '<div class= "align"><a href= "index.html"><input 					id= "return" type= "button" value= "Return to Page">   				</div></a>';
+var error = '<div class= "error"><div class= "errorMsg">FOODIES PANEL JUDGMENT!</div><img height= "400px" width= "400px" class= "center" src= "images/error.jpg"/></div>';
+var errorRedirect = '<div class= "align"><a href= "index.html"><input id= "return" type= "button" value= "Return to Page"></div></a>';
 var foodies = {
 	base_0: "http://www.yummly.com/recipe/",
 	base: "http://api.yummly.com/v1/",
