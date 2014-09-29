@@ -72,7 +72,7 @@ img.resize:hover {
 	box-shadow: 0 0 10px #660000;
 }
 
-span.ingredients {
+p.ingredients {
 	width: 200px;
 	height: 50px;
 	padding: 5px;
