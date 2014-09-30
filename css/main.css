@@ -44,6 +44,16 @@ body {
 	background-color: rgb(250, 250, 200);
 }
 
+div.loadwrap {
+	text-align: center;
+}
+
+img#load {
+	height: 12.5%;
+	width: 12.5%;
+	padding-top: 30px;
+}
+
 div#toAttach {
 	margin: 0 auto;
 }

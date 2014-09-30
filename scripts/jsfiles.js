@@ -12,6 +12,7 @@ var foodies = {
 	
 	init: function() {
 		$('#submit').click(foodies.searchRecipe);
+		$('div.loadwrap').hide();
 	},
 
 	iteration: function(data) {
@@ -19,6 +20,7 @@ var foodies = {
 		var result = '<ul>';
 		var recipe_id;
 		if (data.matches.length > 0) {
+			$('div.loadwrap').hide();
 			$.each(data.matches, function(index, food) {
 				console.log(data.matches);
 			recipe_id = food.id;
@@ -39,6 +41,7 @@ var foodies = {
 		else {
 			$('div.header').hide();
 			$('body').html(error+ '<p class= "right">Sorry your input is temporarily unavailable</p>' + errorRedirect);
+			$('div.loadwrap').hide();
 		}
 			result += '</ul>';
 			$('div#toAttach').append(result);
@@ -58,9 +61,11 @@ var foodies = {
 		if (!isNaN(foodies.parameter.q)) {
 			$('div.header').hide();
 			$('div#toAttach').html(error + '<p class= "right">Please type a valid input</p>' + errorRedirect);
-
+			$('div.loadwrap').hide();
 		}
 		else {
+			$('div#toAttach').empty();
+			$('div.loadwrap').show();
 			$.getJSON(foodies.base + 'api/recipes?callback=?', foodies.parameter, function(response){
 			foodies.iteration(response);
 			});
